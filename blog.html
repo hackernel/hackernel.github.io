@@ -1,0 +1,9 @@
+---
+layout: blog_index
+---
+Latest 25 blog posts:
+<ul>
+	{% for post in site.posts limit:25 %}
+		<li>{{ post.date | date_to_string }} <a href="{{ site.baseurl }}{{post.url }}">{{ post.title }}</a></li>
+	{% endfor %}
+</ul>
